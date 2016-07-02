@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@if (TempData["Msg"] != null)
+{
+    <h3>@TempData["Msg"]</h3>
+}
+
+@using (Html.BeginForm("CrawlProductImage", "Home", FormMethod.Post))
+{
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Crawl" class="btn btn-primary" />
+        </div>
+    </div>
+   
+}
